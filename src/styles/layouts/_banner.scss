@@ -1,18 +1,18 @@
 @import "../global/helpers";
 
 .banner {
-	background-color: $grey-banner-bg;
+	background-color: $lighter-grey-bg;
 	text-align: center;
 	margin-bottom: 4.5rem;
 
 	.banner__location {
-		background-color: $grey-loaction-bg;
+		background-color: $light-grey-bg;
 		padding: 1rem 0;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		gap: 1rem;
-		color: $location-text;
+		color: $dark-grey;
 		font-weight: bold;
 	}
 
