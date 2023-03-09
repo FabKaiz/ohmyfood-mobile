@@ -1,11 +1,10 @@
 @use './global/base';
-@use './global/colors';
-@use './global/mixin';
 
-/*@use './components/navbar';
 @use './components/buttons';
-@use './components/cards';*/
+@use './components/restaurant-card';
+@use './components/fonctionnement';
 
 @use './layouts/header';
+@use './layouts/banner';
 @use './layouts/section';
 @use './layouts/footer';
