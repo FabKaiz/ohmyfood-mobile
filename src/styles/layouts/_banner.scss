@@ -1,0 +1,30 @@
+@import "../global/helpers";
+
+.banner {
+	background-color: $grey-banner-bg;
+	text-align: center;
+	margin-bottom: 4.5rem;
+
+	.banner__location {
+		background-color: $grey-loaction-bg;
+		padding: 1rem 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+		color: $location-text;
+		font-weight: bold;
+	}
+
+	.banner__content {
+		padding: 2rem 3rem;
+
+		.banner__title {
+			margin-bottom: 1rem;
+		}
+
+		.banner__description {
+			margin-bottom: 2rem;
+		}
+	}
+}
