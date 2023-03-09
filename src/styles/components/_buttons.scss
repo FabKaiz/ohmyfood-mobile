@@ -1,5 +1,5 @@
 @import "../global/helpers";
 
 .banner__btn {
-	@include btn-rounded($secondary, $primary, white);
+	@include btn-rounded($secondary, $primary, $white);
 }

@@ -1,0 +1,39 @@
+@import '../global/helpers';
+
+.footer {
+	background-color: $footer-bg;
+	color: $white;
+	padding-top: 1.5rem;
+	padding-bottom: 3rem;
+
+	.company {
+		font-size: 1.1rem;
+		font-weight: unset;
+		margin-bottom: 1rem;
+	}
+
+	.footer__links {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+
+		.footer__link {
+			transition: all 0.3s ease-in-out;
+			display: flex;
+			gap: 0.5rem;
+
+			&:hover {
+				color: $primary-light;
+			}
+
+			.footer__link-icon {
+				font-size: 0.9rem;
+
+				&.rotated {
+					transform: rotate(-45deg);
+					font-size: 0.7rem;
+				}
+			}
+		}
+	}
+}
