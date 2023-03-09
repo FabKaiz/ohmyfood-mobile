@@ -1,0 +1,14 @@
+.fonctionnement {
+	counter-reset: fonctionnement-counter;
+	margin-bottom: 4.5rem;
+
+	.fonctionnement__title {
+		margin-bottom: 2rem;
+	}
+
+	.fonctionnement__steps {
+		display: flex;
+		flex-direction: column;
+		gap: 1.7rem;
+	}
+}

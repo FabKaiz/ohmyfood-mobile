@@ -3,15 +3,26 @@
 	display: inline-block;
 	border-radius: 50px;
 	background-image: linear-gradient(to bottom, $bg1, $bg2);
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 	color: $color;
-	padding: 1rem 2rem;
+	padding: 1rem 1.5rem;
 	font-weight: bold;
-	transition: all 0.3s ease-in-out;
 	cursor: pointer;
+	@include box-shadow();
 
 	&:hover {
-		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 		filter: contrast(115%);
+	}
+}
+
+// box-shadow
+@mixin box-shadow($hover:true) {
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease-in-out;
+
+	@if $hover {
+		&:hover {
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+			filter: contrast(115%);
+		}
 	}
 }
