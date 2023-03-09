@@ -46,9 +46,65 @@
 	}
 }
 
+// Restaurant
+.restaurants__card {
+	border-radius: 15px;
+	position: relative;
+	overflow: hidden;
+	@include box-shadow();
 
-.restaurants__card-img {
-	width: 50px;
-	height: 50px;
+	.restaurants__card-img {
+		width: 100%;
+		height: auto;
+		max-height: 180px;
+		object-fit: cover;
+	}
+
+	.new-tag {
+		position: absolute;
+		top: 15px;
+		right: 10px;
+		background-color: $tertiary;
+		color: $tertiary-dark;
+		padding: 0.35rem 0.7rem;
+		font-size: 0.9rem;
+		font-weight: bold;
+		border-radius: 2px;
+	}
+
+	.restaurants__card-content {
+		padding: 0.5rem 1rem 1rem;
+		@include flex(row, space-between, center);
+
+		.restaurants__card-content_btn {
+			font-size: 1.5rem;
+			position: relative;
+
+			&::after {
+				@include heart-fill();
+				content: "\f004";
+				position: absolute;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				top: 0;
+				left: 0;
+				font-weight: bold;
+				background-image: -webkit-linear-gradient($primary, $secondary);
+				background-position: 50% 100%;
+				background-repeat: no-repeat;
+				background-size: 0 0;
+				animation-name: out;
+				animation-duration: 0.5s;
+			}
+
+			&:hover, &:active {
+				&::after {
+					animation-name: in;
+					animation-duration: 0.5s;
+					animation-fill-mode: forwards;
+				}
+			}
+		}
+	}
 }
 
