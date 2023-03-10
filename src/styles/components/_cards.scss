@@ -78,33 +78,89 @@
 
 		.restaurants__card-content_btn {
 			font-size: 1.5rem;
-			position: relative;
 
-			&::after {
-				@include heart-fill();
-				content: "\f004";
-				position: absolute;
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				top: 0;
-				left: 0;
-				font-weight: bold;
-				background-image: -webkit-linear-gradient($primary, $secondary);
-				background-position: 50% 100%;
-				background-repeat: no-repeat;
-				background-size: 0 0;
-				animation-name: out;
-				animation-duration: 0.5s;
-			}
-
-			&:hover, &:active {
-				&::after {
-					animation-name: in;
-					animation-duration: 0.5s;
-					animation-fill-mode: forwards;
-				}
-			}
+			@include heart-fill-after();
+			@include heart-fill-animation();
 		}
 	}
 }
 
+// Plats
+.meal__card {
+	width: 100%;
+	cursor: pointer;
+	border-radius: 15px;
+	@include box-shadow();
+	position: relative;
+	overflow: hidden;
+
+	.meal__card-content {
+		@include flex(row, space-between, end);
+		padding: 1rem;
+
+		.meal__card-content_text {
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+
+			.meal__card-content_title {
+				font-size: 1.1rem;
+				font-weight: bold;
+				margin-bottom: 0.5rem;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+
+			.meal__card-content_description {
+				margin: 0;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+		}
+
+		.meal__card-price {
+			font-weight: bold;
+			transition: all 0.3s ease-in-out;
+		}
+	}
+
+	.meal__card-check {
+		@include flex(row, center, center);
+		background-color: $tertiary;
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		transition: all 0.3s ease-in-out;
+		z-index: 1;
+		width: 0;
+
+		.meal__card-check_btn {
+			font-size: 1.5rem;
+			color: $white;
+			transition: all 0.3s ease-in-out 0.1s;
+		}
+	}
+
+	&:hover {
+		.meal__card-price {
+			margin-right: 70px;
+		}
+
+		.meal__card-check {
+			width: 70px;
+		}
+
+		.meal__card-check_btn {
+			transform: rotate(360deg);
+		}
+	}
+
+	&:active {
+		.meal__card-check_btn {
+			color: $tertiary-dark;
+		}
+	}
+}

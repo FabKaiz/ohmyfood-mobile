@@ -5,9 +5,10 @@
 	background-image: linear-gradient(to bottom, $bg1, $bg2);
 	color: $color;
 	padding: 1rem 1.5rem;
-	font-weight: bold;
 	cursor: pointer;
 	@include box-shadow();
+	border: none;
+	font-size: 1rem;
 
 	&:hover {
 		filter: contrast(115%);
@@ -27,6 +28,21 @@
 	}
 }
 
+// text underlined
+@mixin text-underlined($color) {
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 60%;
+		height: 3px;
+		background-color: $color;
+		bottom: -5px;
+		left: 0;
+	}
+}
+
 // flex
 @mixin flex($direction, $justify, $align) {
 	display: flex;
@@ -35,12 +51,42 @@
 	align-items: $align;
 }
 
+// heart fill after
+@mixin heart-fill-after($color1: $primary, $color2: $secondary) {
+	position: relative;
+	cursor: pointer;
+
+	&::after {
+		content: "\f004";
+		position: absolute;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		top: 0;
+		left: 0;
+		font-weight: bold;
+		background-image: -webkit-linear-gradient($color1, $color2);
+		background-position: 50% 100%;
+		background-repeat: no-repeat;
+		background-size: 0 0;
+		animation-name: out;
+		animation-duration: 0.5s;
+	}
+
+	&:hover, &:active {
+		&::after {
+			animation-name: in;
+			animation-duration: 0.5s;
+			animation-fill-mode: forwards;
+		}
+	}
+}
+
 // heart fill keyframes animation
 /*
  * @-webkit-keyframes for Chrome, Safari, and Opera
  * @keyframes for Firefox and IE
 */
-@mixin heart-fill {
+@mixin heart-fill-animation {
 	@-webkit-keyframes in {
 		from {
 			background-size: 0 0;
@@ -85,6 +131,4 @@
 			opacity: 0;
 		}
 	}
-
-
 }

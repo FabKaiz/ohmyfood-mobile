@@ -3,3 +3,10 @@
 .banner__btn {
 	@include btn-rounded($secondary, $primary, $white);
 }
+
+.meal__btn {
+	@include btn-rounded($secondary, $primary, $white);
+	padding: 1rem 3rem;
+	display: flex;
+	justify-self: center;
+}

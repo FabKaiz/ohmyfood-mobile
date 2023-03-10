@@ -1,0 +1,51 @@
+@import "../global/helpers";
+
+.meal__container {
+	margin-bottom: 2.5rem;
+
+	.meal__card {
+		animation: my-animation 900ms ease-out;
+		animation-fill-mode: backwards;
+
+		@for $i from 1 through 10 {
+			&:nth-child(#{$i}) {
+				animation-delay: 300ms * $i;
+			}
+		}
+	}
+}
+
+.meal {
+	margin: 1rem 0 2.5rem;
+
+	.meal__type {
+		width: fit-content;
+		text-transform: uppercase;
+		font-weight: normal;
+		@include text-underlined($tertiary);
+		margin: 0 1rem 1rem;
+	}
+
+	.meal__cards {
+		@include flex(row, space-between, center);
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin: 0 1rem;
+	}
+}
+
+@keyframes my-animation {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.meal__btn-container {
+	@include flex(row, center, center);
+}
