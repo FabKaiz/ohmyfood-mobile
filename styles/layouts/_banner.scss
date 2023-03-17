@@ -78,6 +78,8 @@
 		.banner__restaurant-btn {
 			font-size: 1.7rem;
 			margin-right: 1rem;
+			position: relative;
+
 
 			@include heart-fill-after();
 			@include heart-fill-animation();

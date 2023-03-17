@@ -53,7 +53,6 @@
 
 // heart fill after
 @mixin heart-fill-after($color1: $primary, $color2: $secondary) {
-	position: relative;
 	cursor: pointer;
 
 	&::after {

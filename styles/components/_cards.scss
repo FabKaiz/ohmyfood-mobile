@@ -87,13 +87,16 @@
 	.restaurants__card-content {
 		padding: 0.5rem 1rem 1rem;
 		@include flex(row, space-between, center);
+	}
 
-		.restaurants__card-content_btn {
-			font-size: 1.5rem;
+	.restaurants__card-content_btn {
+		font-size: 1.5rem;
+		position: absolute;
+		right: 20px;
+		bottom: 20px;
 
-			@include heart-fill-after();
-			@include heart-fill-animation();
-		}
+		@include heart-fill-after();
+		@include heart-fill-animation();
 	}
 }
 

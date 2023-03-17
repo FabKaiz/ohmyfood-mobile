@@ -182,12 +182,14 @@ main {
   justify-content: space-between;
   align-items: center;
 }
-.restaurants__card .restaurants__card-content .restaurants__card-content_btn {
+.restaurants__card .restaurants__card-content_btn {
   font-size: 1.5rem;
-  position: relative;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
   cursor: pointer;
 }
-.restaurants__card .restaurants__card-content .restaurants__card-content_btn::after {
+.restaurants__card .restaurants__card-content_btn::after {
   content: "\f004";
   position: absolute;
   -webkit-background-clip: text;
@@ -202,7 +204,7 @@ main {
   animation-name: out;
   animation-duration: 0.5s;
 }
-.restaurants__card .restaurants__card-content .restaurants__card-content_btn:hover::after, .restaurants__card .restaurants__card-content .restaurants__card-content_btn:active::after {
+.restaurants__card .restaurants__card-content_btn:hover::after, .restaurants__card .restaurants__card-content_btn:active::after {
   animation-name: in;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
