@@ -1,7 +1,7 @@
 # Ohmyfood - Mobile
 OpenclassRooms JavascScript React project 3 - "Ohmyfood"
 
-Result : 👉 [Here](https://fabkaiz.github.io/ohmyfood-mobile/src)
+Result : 👉 [Here](https://fabkaiz.github.io/ohmyfood-mobile)
 
 #### What i used :
 * Html
