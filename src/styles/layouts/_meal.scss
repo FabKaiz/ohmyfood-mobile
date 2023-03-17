@@ -18,19 +18,40 @@
 .meal {
 	margin: 1rem 0 2.5rem;
 
+	@include media(desktop) {
+		margin: 2rem 0 3rem;
+	}
+
 	.meal__type {
 		width: fit-content;
 		text-transform: uppercase;
 		font-weight: normal;
 		@include text-underlined($tertiary);
 		margin: 0 1rem 1rem;
+
+		@include media(tablet) {
+			margin: 0 1rem 2rem;
+		}
+
+		@include media(desktop) {
+			margin: 0 1rem 3rem;
+		}
 	}
 
 	.meal__cards {
-		@include flex(row, space-between, center);
+		@include flex(column, space-between, center);
 		flex-wrap: wrap;
 		gap: 0.5rem;
 		margin: 0 1rem;
+
+		@include media(tablet) {
+			flex-direction: row;
+		}
+
+		@include media(desktop) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
 	}
 }
 

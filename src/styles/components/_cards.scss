@@ -53,11 +53,23 @@
 	overflow: hidden;
 	@include box-shadow();
 
+	@include media(tablet) {
+		width: calc((100% - 20px) / 2);
+	}
+
+	@include media(desktop) {
+		width: calc((100% - 40px) / 4);
+	}
+
 	.restaurants__card-img {
 		width: 100%;
 		height: auto;
 		max-height: 180px;
 		object-fit: cover;
+
+		@include media(desktop) {
+			max-height: 150px;
+		}
 	}
 
 	.new-tag {
@@ -93,6 +105,14 @@
 	@include box-shadow();
 	position: relative;
 	overflow: hidden;
+
+	@include media(tablet) {
+		width: calc((100% - 20px) / 2);
+	}
+
+	@include media(desktop) {
+		width: calc((100% - 40px) / 3);
+	}
 
 	.meal__card-content {
 		@include flex(row, space-between, end);

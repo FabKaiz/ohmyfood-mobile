@@ -1,3 +1,7 @@
+/*
+ * @-webkit-keyframes for Chrome, Safari, and Opera
+ * @keyframes for Firefox and IE
+*/
 *,
 html,
 body {
@@ -9,6 +13,12 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -23,6 +33,12 @@ li {
 
 h1, .h1-style {
   font-family: "Shrikhand", cursive;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /*
@@ -127,11 +143,26 @@ h1, .h1-style {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
   filter: contrast(115%);
 }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .restaurants__card {
+    width: calc((100% - 20px) / 2);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .restaurants__card {
+    width: calc((100% - 40px) / 4);
+  }
+}
 .restaurants__card .restaurants__card-img {
   width: 100%;
   height: auto;
   max-height: 180px;
   object-fit: cover;
+}
+@media only screen and (min-width: 1024px) {
+  .restaurants__card .restaurants__card-img {
+    max-height: 150px;
+  }
 }
 .restaurants__card .new-tag {
   position: absolute;
@@ -230,6 +261,16 @@ h1, .h1-style {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
   filter: contrast(115%);
 }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .meal__card {
+    width: calc((100% - 20px) / 2);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .meal__card {
+    width: calc((100% - 40px) / 3);
+  }
+}
 .meal__card .meal__card-content {
   display: flex;
   flex-direction: row;
@@ -292,6 +333,10 @@ h1, .h1-style {
   color: #437a6d;
 }
 
+/*
+ * @-webkit-keyframes for Chrome, Safari, and Opera
+ * @keyframes for Firefox and IE
+*/
 .fonctionnement {
   counter-reset: fonctionnement-counter;
   margin-bottom: 4.5rem;
@@ -303,6 +348,12 @@ h1, .h1-style {
   display: flex;
   flex-direction: column;
   gap: 1.7rem;
+}
+@media only screen and (min-width: 1024px) {
+  .fonctionnement .fonctionnement__steps {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 
 /*
@@ -454,8 +505,10 @@ h1, .h1-style {
 .header {
   width: 100%;
   height: 70px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 9px -6px rgba(0, 0, 0, 0.5);
   z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .header .header__logo {
   width: 100%;
@@ -494,6 +547,11 @@ h1, .h1-style {
   text-align: center;
   margin-bottom: 4.5rem;
 }
+@media only screen and (min-width: 1200px) {
+  .banner {
+    border-radius: 0 0 15px 15px;
+  }
+}
 .banner .banner__location {
   background-color: #EAEAEA;
   padding: 1rem 0;
@@ -524,6 +582,16 @@ h1, .h1-style {
   object-position: center;
   margin-bottom: 3rem;
 }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .banner__restaurant .banner__restaurant-img {
+    max-height: 300px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .banner__restaurant .banner__restaurant-img {
+    max-height: 400px;
+  }
+}
 .banner__restaurant .banner__restaurant-content {
   display: flex;
   flex-direction: row;
@@ -540,6 +608,16 @@ h1, .h1-style {
 .banner__restaurant .banner__restaurant-content .banner__restaurant-title {
   font-size: 1.7rem;
   margin: 0;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .banner__restaurant .banner__restaurant-content .banner__restaurant-title {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .banner__restaurant .banner__restaurant-content .banner__restaurant-title {
+    font-size: 2.5rem;
+  }
 }
 .banner__restaurant .banner__restaurant-content .banner__restaurant-btn {
   font-size: 1.7rem;
@@ -621,6 +699,11 @@ h1, .h1-style {
   padding-top: 3rem;
   padding-bottom: 4rem;
 }
+@media only screen and (min-width: 1200px) {
+  .restaurants {
+    border-radius: 15px;
+  }
+}
 .restaurants .restaurants__title {
   margin-bottom: 1rem;
 }
@@ -628,6 +711,19 @@ h1, .h1-style {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .restaurants .restaurants__cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .restaurants .restaurants__cards {
+    justify-content: space-around;
+    flex-direction: row;
+  }
 }
 
 /*
@@ -675,6 +771,11 @@ h1, .h1-style {
 .meal {
   margin: 1rem 0 2.5rem;
 }
+@media only screen and (min-width: 1024px) {
+  .meal {
+    margin: 2rem 0 3rem;
+  }
+}
 .meal .meal__type {
   width: fit-content;
   text-transform: uppercase;
@@ -691,14 +792,35 @@ h1, .h1-style {
   bottom: -5px;
   left: 0;
 }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .meal .meal__type {
+    margin: 0 1rem 2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .meal .meal__type {
+    margin: 0 1rem 3rem;
+  }
+}
 .meal .meal__cards {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin: 0 1rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .meal .meal__cards {
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .meal .meal__cards {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 @keyframes my-animation {
@@ -727,19 +849,59 @@ h1, .h1-style {
   color: #FFFFFF;
   padding-top: 1.5rem;
   padding-bottom: 3rem;
+  max-width: 1200px;
+  margin: auto auto 0;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .footer {
+    padding: 2rem 3rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .footer {
+    padding: 2rem 4rem 4rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .footer {
+    border-radius: 15px 15px 0 0;
+  }
 }
 .footer .company {
   font-size: 1.1rem;
   font-weight: unset;
   margin-bottom: 1rem;
 }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .footer .company {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .footer .company {
+    font-size: 2.3rem;
+  }
+}
 .footer .footer__links {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .footer .footer__links {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .footer .footer__links {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .footer .footer__links .footer__link {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
   display: flex;
   gap: 0.5rem;
 }

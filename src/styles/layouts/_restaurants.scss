@@ -5,6 +5,10 @@
 	padding-top: 3rem;
 	padding-bottom: 4rem;
 
+	@include media(max-content-width) {
+		border-radius: 15px;
+	}
+
 	.restaurants__title {
 		margin-bottom: 1rem;
 	}
@@ -13,5 +17,16 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
+
+		@include media(tablet) {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		@include media(desktop) {
+			justify-content: space-around;
+			flex-direction: row;
+		}
 	}
 }

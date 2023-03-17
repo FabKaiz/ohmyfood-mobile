@@ -5,6 +5,10 @@
 	text-align: center;
 	margin-bottom: 4.5rem;
 
+	@include media(max-content-width) {
+		border-radius: 0 0 15px 15px;
+	}
+
 	.banner__location {
 		background-color: $light-grey-bg;
 		padding: 1rem 0;
@@ -38,6 +42,14 @@
 		object-fit: cover;
 		object-position: center;
 		margin-bottom: 3rem;
+
+		@include media(tablet) {
+			max-height: 300px;
+		}
+
+		@include media(desktop) {
+			max-height: 400px;
+		}
 	}
 
 	.banner__restaurant-content {
@@ -53,6 +65,14 @@
 		.banner__restaurant-title {
 			font-size: 1.7rem;
 			margin: 0;
+
+			@include media(tablet) {
+				font-size: 2rem;
+			}
+
+			@include media(desktop) {
+				font-size: 2.5rem;
+			}
 		}
 
 		.banner__restaurant-btn {
